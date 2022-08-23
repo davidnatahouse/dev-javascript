@@ -27,7 +27,34 @@
  *
  */
 
-function searchLetter(letter, word) {}
+function searchLetter(letter, word) {
+  
+  const isLetter = typeof letter === 'string' && letter.split('').length === 1;
+  const isWord = typeof word === 'string' && word.split('').length > 1;
+  let count = 0;
+
+  if(!isLetter){
+    console.log(`Parâmetro Letra inválido: ${letter}`)
+  }
+
+  if(!isWord){
+    console.log(`Parâmetro Palavra inválido: ${word}`)    
+  }
+  
+  if(isLetter && isWord){    
+  
+    count = 0;
+
+    for(let i = 0; i < word.length; i++){
+      
+      if(letter.toUpperCase() === word[i].toUpperCase()){
+        count++;
+      }
+    }
+    console.log(`Parâmetros: letra = ${letter}, palavra = ${word}`, `\nMensagem: Letra: ${letter}; Palavra: ${word}; Quantidade encontrada:  ${count}`)
+  }
+  }
+
 
 console.log("Sucesso --------------------------------------------------");
 searchLetter("a", "Natahouse");
