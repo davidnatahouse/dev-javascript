@@ -9,6 +9,13 @@ const peoples = [
   { id: 2, firstName: "Rafa", LastName: "Reis", idade: undefined, age: 31 },
 ];
 
+const fullName = peoples.map( person => ({
+    id: person.id,
+    fullName: `${person.firstName} ${person.LastName}`}
+))
+
+console.log(fullName);
+
 //your code here
 
 //Expected
