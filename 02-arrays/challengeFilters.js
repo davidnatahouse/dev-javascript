@@ -18,3 +18,7 @@ const products = [
 ];
 
 // your code here
+
+const soldItems = products.filter( item => item.sold === true);
+
+console.log(soldItems[2]);
