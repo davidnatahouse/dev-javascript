@@ -10,5 +10,9 @@ const peoples = [
 
 //Your code here
 
+const sortedPeople = peoples.sort( function(a, b){ return a.age - b.age} ).reverse();
+
+console.log(sortedPeople[2]);
+
 //Expected
 // const ageSorted = [33, 31, 21];
